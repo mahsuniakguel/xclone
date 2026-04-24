@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts - Share Your Mind</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <span>Bookmarks</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <button class="post-btn-sidebar">
+                <span>Post</span>
+            </button>
+            <div class="user-profile">
+                <img src="images/user.webp" alt="Your profile" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">You</span>
+                    <span class="user-handle">@user101</span>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Home</h1>
+                <div class="header-tabs">
+                    <button class="tab active">For You</button>
+                    <button class="tab">Following</button>
+                </div>
+            </header>
+
+            <!-- Compose Area -->
+            <div class="compose-area">
+                <img src="images/user.webp" alt="Your profile" class="compose-avatar">
+                <div class="compose-input-wrapper">
+                    <textarea
+                        id="thought-input"
+                        placeholder="What's happening?!"
+                        rows="1"
+                    ></textarea>
+                    <div class="compose-actions">
+                        <div class="compose-tools">
+                            <button class="tool-btn" title="Image">
+                                <i class="fa-regular fa-image"></i>
+                            </button>
+                            <button class="tool-btn" title="GIF">
+                                <i class="fa-solid fa-gif"></i>
+                            </button>
+                            <button class="tool-btn" title="Poll">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </button>
+                            <button class="tool-btn" title="Emoji">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </button>
+                            <button class="tool-btn" title="Schedule">
+                                <i class="fa-regular fa-calendar"></i>
+                            </button>
+                        </div>
+                        <div class="compose-submit">
+                            <div class="char-counter" id="char-counter"></div>
+                            <button class="post-btn" id="post-btn">Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feed-divider"></div>
+
+            <!-- Feed -->
+            <div class="feed" id="feed">
+                <!-- Tweets rendered here -->
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search" class="search-input">
+            </div>
+
+            <div class="trending-card">
+                <h2>Trends for you</h2>
+                <div class="trend-item">
+                    <span class="trend-category">Technology · Trending</span>
+                    <span class="trend-topic">#AI</span>
+                    <span class="trend-posts">125K posts</span>
+                </div>
+                <div class="trend-item">
+                    <span class="trend-category">Sports · Trending</span>
+                    <span class="trend-topic">#ChampionsLeague</span>
+                    <span class="trend-posts">89.2K posts</span>
+                </div>
+                <div class="trend-item">
+                    <span class="trend-category">Entertainment · Trending</span>
+                    <span class="trend-topic">#NewMusic</span>
+                    <span class="trend-posts">45.1K posts</span>
+                </div>
+                <div class="trend-item">
+                    <span class="trend-category">Business · Trending</span>
+                    <span class="trend-topic">#Crypto</span>
+                    <span class="trend-posts">32.8K posts</span>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+            </div>
+
+            <div class="who-to-follow">
+                <h2>Who to follow</h2>
+                <div class="follow-suggestion">
+                    <img src="images/elon.webp" alt="Elon" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-name">Elon Musk</span>
+                        <span class="suggestion-handle">@elon</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <div class="follow-suggestion">
+                    <img src="images/ronaldo.webp" alt="Ronaldo" class="suggestion-avatar">
+                    <div class="suggestion-info">
+                        <span class="suggestion-name">Cristiano</span>
+                        <span class="suggestion-handle">@ronaldo</span>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                </div>
+                <a href="#" class="show-more">Show more</a>
+            </div>
+
+            <footer class="sidebar-footer">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Accessibility</a>
+                <span>&copy; 2024 Thoughts</span>
+            </footer>
+        </aside>
+    </div>
+
+    <!-- Reply Modal -->
+    <div class="modal-overlay" id="reply-modal">
+        <div class="modal">
+            <button class="modal-close" id="modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content">
+                <div class="reply-to-tweet" id="reply-to-tweet">
+                    <!-- Original tweet shown here -->
+                </div>
+                <div class="reply-compose">
+                    <img src="images/user.webp" alt="Your profile" class="compose-avatar">
+                    <div class="reply-input-wrapper">
+                        <textarea
+                            id="reply-input"
+                            placeholder="Post your reply"
+                            rows="3"
+                        ></textarea>
+                        <button class="post-btn reply-btn" id="reply-btn">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
